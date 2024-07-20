@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:fluttertesting/GlobalUI/GlobalAppColours.dart';
 class CustomBottomAppBar extends StatelessWidget {
   final int selectedIndex;
   final Function(int) onItemTapped;
@@ -14,10 +14,10 @@ class CustomBottomAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return BottomAppBar(
       shape: const CircularNotchedRectangle(),
-      color: Colors.grey,
+      color: AppColours.bottomBarColor,
       notchMargin: 6.0,
       child: Container(
-        height: 60.0,
+        height: 40.0,
         padding: const EdgeInsets.symmetric(horizontal: 10.0),
         child: LayoutBuilder(
           builder: (context, constraints) {
@@ -33,7 +33,8 @@ class CustomBottomAppBar extends StatelessWidget {
                     child: Icon(
                       Icons.home,
                       key: ValueKey<bool>(selectedIndex == 0),
-                      color: selectedIndex == 0 ? Colors.deepPurple : Colors.black,
+                      color: selectedIndex == 0 ? AppColours.buttonColor :
+                      AppColours.lightIconColor,
                       size: selectedIndex == 0 ? 30.0 : 24.0, // Adjust the size as needed
                     ),
                   ),
@@ -50,9 +51,10 @@ class CustomBottomAppBar extends StatelessWidget {
                       return ScaleTransition(scale: animation, child: child);
                     },
                     child: Icon(
-                      Icons.search,
+                      Icons.category_sharp,
                       key: ValueKey<bool>(selectedIndex == 1),
-                      color: selectedIndex == 1 ? Colors.deepPurple : Colors.black,
+                      color: selectedIndex == 1 ? AppColours.buttonColor :
+                      AppColours.lightIconColor,
                       size: selectedIndex == 1 ? 30.0 : 24.0, // Adjust the size as needed
                     ),
                   ),
@@ -60,7 +62,7 @@ class CustomBottomAppBar extends StatelessWidget {
                     onItemTapped(1);
                     Navigator.pushNamed(context, '/search');
                   },
-                  tooltip: 'Search',
+                  tooltip: 'Category',
                 ),
                 const SizedBox(width: 40), // The space for the floating button
                 IconButton(
@@ -72,7 +74,8 @@ class CustomBottomAppBar extends StatelessWidget {
                     child: Icon(
                       Icons.favorite,
                       key: ValueKey<bool>(selectedIndex == 2),
-                      color: selectedIndex == 2 ? Colors.deepPurple : Colors.black,
+                      color: selectedIndex == 2 ? AppColours.buttonColor :
+                      AppColours.lightIconColor,
                       size: selectedIndex == 2 ? 30.0 : 24.0, // Adjust the size as needed
                     ),
                   ),
@@ -91,7 +94,8 @@ class CustomBottomAppBar extends StatelessWidget {
                     child: Icon(
                       Icons.person,
                       key: ValueKey<bool>(selectedIndex == 3),
-                      color: selectedIndex == 3 ? Colors.deepPurple : Colors.black,
+                      color: selectedIndex == 3 ? AppColours.buttonColor :
+                      AppColours.lightIconColor,
                       size: selectedIndex == 3 ? 30.0 : 24.0, // Adjust the size as needed
                     ),
                   ),
@@ -121,7 +125,8 @@ class FloatingCartButton extends StatelessWidget {
       },
       tooltip: 'Cart',
       shape: const CircleBorder(),
-      child: const Icon(Icons.shopping_cart),
+      child: const Icon(Icons.shopping_cart,color: AppColours.lightIconColor,),
+      backgroundColor: AppColours.buttonColor,
     );
   }
 }
