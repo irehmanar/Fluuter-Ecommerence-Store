@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertesting/Widgets/BottomAppBar.dart';
 import 'package:fluttertesting/Widgets/ProductGridDisplay.dart';
 import 'package:fluttertesting/Models/Product.dart';
-import 'package:fluttertesting/GlobalUI/GlobalAppColours.dart'; // Import AppColours
+import 'package:fluttertesting/GlobalUI/GlobalAppColours.dart';
 
 class SearchPage extends StatefulWidget {
   const SearchPage({super.key});
@@ -53,9 +53,9 @@ class _SearchPageState extends State<SearchPage> with SingleTickerProviderStateM
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColours.appbarColor,
+      backgroundColor: AppColours.backGroundColour,
       appBar: AppBar(
-        backgroundColor:  AppColours.appbarColor,
+        backgroundColor: AppColours.textFieldColour,
         title: Text('Store Online',style: TextStyle(color: AppColours.textColor),),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),

@@ -60,9 +60,9 @@ class _LikedPageState extends State<LikedPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColours.backGroundColour, // Set the background color
+      backgroundColor: AppColours.backGroundColour,
       appBar: AppBar(
-        backgroundColor:  AppColours.appbarColor,
+        backgroundColor: AppColours.textFieldColour,
         title: Text('Store Online',style: TextStyle(color: AppColours.textColor),),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),

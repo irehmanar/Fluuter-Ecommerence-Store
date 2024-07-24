@@ -13,7 +13,7 @@ class WatchDetailsPage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor:  AppColours.appbarColor,
+        backgroundColor: AppColours.textFieldColour,
         title: Text('Store Online',style: TextStyle(color: AppColours.textColor),),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
