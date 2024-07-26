@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:fluttertesting/Widgets/BottomAppBar.dart';
-import 'package:fluttertesting/GlobalUI/GlobalAppColours.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+import 'package:fluttertesting/Widgets/BottomAppBar.dart';
+
+import 'package:fluttertesting/GlobalUI/GlobalAppColours.dart';
+
+import 'package:fluttertesting/Pages/ViewProfile.dart';
+
+
 class AccountPage extends StatefulWidget {
   const AccountPage({super.key});
 
@@ -61,13 +67,13 @@ class _AccountPageState extends State<AccountPage> {
                 height: MediaQuery.sizeOf(context).height * 0.03,
               ),
               GestureDetector(
-                // onTap: () {
-                //   Navigator.pushReplacement(
-                //       context,
-                //       MaterialPageRoute(
-                //           builder: (context) =>
-                //           const ProfilePage(currentIndex: 4)));
-                // },
+                onTap: () {
+                  Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                          const ProfilePage()));
+                },
                 child: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
